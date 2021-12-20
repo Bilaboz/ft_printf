@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef FT_PRINTF_BUFFER_SIZE
-#  define FT_PRINTF_BUFFER_SIZE 5
+#  define FT_PRINTF_BUFFER_SIZE 128
 # endif
 
 int	ft_printf(const char *format, ...);
