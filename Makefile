@@ -7,7 +7,7 @@ SRCS = ft_printf.c parser.c utils.c types.c buffer.c process_flags.c utils2.c ty
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR) -I $(LIBFT_DIR) -g
+CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR) -I $(LIBFT_DIR)
 
 NAME = libftprintf.a
 
@@ -17,9 +17,6 @@ $(NAME): libft $(OBJ_DIR) $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 bonus: $(NAME)
-
-exe: libft $(OBJ_DIR) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) libft/ft_atoi.o libft/ft_strlcat.o libft/ft_strlen.o libft/ft_strdup.o
 
 libft:
 	$(MAKE) -C $(LIBFT_DIR)
