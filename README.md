@@ -1,0 +1,7 @@
+# ft_printf
+
+Remake of `printf()` function.
+
+It supports: the following conversions: `cspdiuxX%`, the following flags: `-0.# +` and minimum field width.
+
+The project respects <a href="https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf">the Norm</a> and is part of the cursus at 42Paris School
