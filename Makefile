@@ -6,7 +6,7 @@ LIBFT_DIR = libft/
 SRCS = ft_printf.c parser.c utils.c types.c buffer.c process_flags.c utils2.c types2.c
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
-CC = clang
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR) -I $(LIBFT_DIR)
 
 NAME = libftprintf.a
