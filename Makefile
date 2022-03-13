@@ -11,14 +11,16 @@ CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR) -I $(LIBFT_DIR)
 
 NAME = libftprintf.a
 
+LIBFT = $(LIBFT_DIR)libft.a
+
 all: $(NAME)
 
-$(NAME): libft $(OBJ_DIR) $(OBJS)
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 bonus: $(NAME)
 
-libft:
+$(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 	cp $(LIBFT_DIR)libft.a $(NAME)
 
@@ -37,4 +39,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re libft bonus
+.PHONY: all clean fclean re bonus

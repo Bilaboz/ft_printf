@@ -26,10 +26,8 @@ static void	flush_buffer(char *buffer, size_t *curr_buf_size)
 
 static int	concat_buff(char *buff, size_t curr_buf_size, char *s, size_t n)
 {
-	size_t	i;
 	size_t	j;
 
-	i = 0;
 	j = 0;
 	while (j < n && curr_buf_size + j < FT_PRINTF_BUFFER_SIZE)
 	{

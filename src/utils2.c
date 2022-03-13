@@ -38,11 +38,6 @@ void	ft_putnbr_unsigned(unsigned int nb)
 	unsigned long	n;
 
 	n = (unsigned long) nb;
-	if (n < 0)
-	{
-		n *= -1;
-		write_buf("-", 1);
-	}
 	if (n > 9)
 	{
 		ft_putnbr_buff(n / 10);

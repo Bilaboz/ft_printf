@@ -12,6 +12,7 @@ BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_b
 OBJS = ${SRCS:.c=.o}
 BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
@@ -25,7 +26,7 @@ bonus: ${OBJS} ${BONUS_OBJS}
 	ar rc ${NAME} ${OBJS} ${BONUS_OBJS}
 
 .c.o:
-	clang ${CFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
 	rm -f ${OBJS} ${BONUS_OBJS}
